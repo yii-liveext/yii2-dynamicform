@@ -151,7 +151,7 @@ class DynamicFormWidget extends \yii\base\Widget
      */
     protected function registerOptions($view)
     {
-        $view->registerJs("var {$this->_hashVar} = {$this->_encodedOptions};\n", $view::POS_LOAD);
+        $view->registerJs("var {$this->_hashVar} = {$this->_encodedOptions};\n", $view::POS_HEAD);
     }
 
     /**
