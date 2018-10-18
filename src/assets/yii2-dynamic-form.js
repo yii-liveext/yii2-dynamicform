@@ -115,19 +115,19 @@
         var count = _count($elem, widgetOptions);
 
         if (count < widgetOptions.limit) {
-            var toclone = $(widgetOptions.template);
-            var newclone = toclone.clone(false, false);
+            $toclone = widgetOptions.template;
+            $newclone = $toclone.clone(false, false);
 
             if (widgetOptions.insertPosition === 'top') {
-                $elem.closest('.' + widgetOptions.widgetContainer).find(widgetOptions.widgetBody).prepend(newclone);
+                $elem.closest('.' + widgetOptions.widgetContainer).find(widgetOptions.widgetBody).prepend($newclone);
             } else {
-                $elem.closest('.' + widgetOptions.widgetContainer).find(widgetOptions.widgetBody).append(newclone);
+                $elem.closest('.' + widgetOptions.widgetContainer).find(widgetOptions.widgetBody).append($newclone);
             }
 
             _updateAttributes(widgetOptions);
             _restoreSpecialJs(widgetOptions);
             _fixFormValidaton(widgetOptions);
-            $elem.closest('.' + widgetOptions.widgetContainer).triggerHandler(events.afterInsert, newclone);
+            $elem.closest('.' + widgetOptions.widgetContainer).triggerHandler(events.afterInsert, $newclone);
         } else {
             // trigger a custom event for hooking
             $elem.closest('.' + widgetOptions.widgetContainer).triggerHandler(events.limitReached, widgetOptions.limit);
