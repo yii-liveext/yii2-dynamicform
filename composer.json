@@ -1,8 +1,7 @@
 {
-    "name": "wbraganca/yii2-dynamicform",
+    "name": "yii-liveext/yii2-dynamicform",
     "description": "It is widget to yii2 framework to clone form elements in a nested manner, maintaining accessibility.",
     "keywords": [
-        "wbraganca",
         "yii2",
         "extension",
         "widget",
@@ -31,7 +30,7 @@
     },
     "autoload": {
         "psr-4": {
-            "wbraganca\\dynamicform\\": "src"
+            "yii-liveext\\dynamicform\\": "src"
         }
     }
 }
