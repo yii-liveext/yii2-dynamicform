@@ -151,7 +151,7 @@ class DynamicFormWidget extends \yii\base\Widget
      */
     protected function registerOptions($view)
     {
-        $view->registerJs("var {$this->_hashVar} = {$this->_encodedOptions};\n", $view::POS_HEAD);
+        $view->registerJs("var {$this->_hashVar} = {$this->_encodedOptions};\n", $view::POS_LOAD);
     }
 
     /**
@@ -216,7 +216,8 @@ class DynamicFormWidget extends \yii\base\Widget
         $js .= "});\n";
         $view->registerJs($js, $view::POS_READY);
 
-        $js = 'jQuery("#' . $this->formId . '").on(\'afterInit\', function () {jQuery("#' . $this->formId . '").yiiDynamicForm(' . $this->_hashVar .');});' . "\n"; $view->registerJs($js, $view::POS_LOAD);
+        $js = 'jQuery("#' . $this->formId . '").on(\'afterInit\', function () {jQuery("#' . $this->formId . '").yiiDynamicForm(' . $this->_hashVar .');});' . "\n";
+        $view->registerJs($js, $view::POS_LOAD);
     }
 
     /**
