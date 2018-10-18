@@ -115,8 +115,8 @@
         var count = _count($elem, widgetOptions);
 
         if (count < widgetOptions.limit) {
-            $toclone = widgetOptions.template;
-            $newclone = $toclone.clone(false, false);
+            var toclone = widgetOptions.template;
+            $newclone = toclone.clone(false, false);
 
             if (widgetOptions.insertPosition === 'top') {
                 $elem.closest('.' + widgetOptions.widgetContainer).find(widgetOptions.widgetBody).prepend($newclone);
