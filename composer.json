@@ -11,9 +11,9 @@
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
     "support": {
-        "issues": "https://github.com/yii-liveext/yii2-dynamicform/issues",
-        "wiki": "https://github.com/yii-liveext/yii2-dynamicform/wiki/",
-        "source": "https://github.com/yii-liveext/yii2-dynamicform"
+        "issues": "https://github.com/yiiliveext/yii2-dynamicform/issues",
+        "wiki": "https://github.com/yiiliveext/yii2-dynamicform/wiki/",
+        "source": "https://github.com/yiiliveext/yii2-dynamicform"
     },
     "authors": [
         {
