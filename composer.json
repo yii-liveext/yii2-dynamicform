@@ -29,7 +29,7 @@
     },
     "autoload": {
         "psr-4": {
-            "yii-liveext\\dynamicform\\": "src"
+            "yiiliveext\\dynamicform\\": "src"
         }
     }
 }
